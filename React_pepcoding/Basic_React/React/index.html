@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js'></script>
+
+	<title></title>
+</head>
+<body>
+	<div id = "root"></div>
+</body>
+
+<script type="text/babel">
+	// Functional Component
+	function Element({name}) {
+		console.log(name);
+		return (
+			<h1>Hello</h1>
+		)
+	}
+
+	// resuse ability of code
+	function Main() {
+		return(
+			<div>
+				<Element name = "Navteg"/>
+				<Element/>
+				<Element/>
+			</div>
+		)
+	}
+
+
+	ReactDOM.render(<Main/>, document.getElementById('root'));
+</script>
+
+</html>
